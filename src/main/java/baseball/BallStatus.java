@@ -1,7 +1,17 @@
 package baseball;
 
 public enum BallStatus {
-    BALL, STRIKE, NOTHING;
+    BALL("볼"), STRIKE("스트라이크"), NOTHING("낫싱");
+
+    private final String message;
+
+    BallStatus(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 
     public boolean isNotNothing() {
         return this != NOTHING;
