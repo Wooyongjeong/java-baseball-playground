@@ -25,7 +25,7 @@ public class BallsTest {
         Result result = computerBalls.play(userNumbers);
         assertThat(result.getBall()).isEqualTo(expectedBall);
         assertThat(result.getStrike()).isEqualTo(expectedStrike);
-        assertThat(result.isGameEnd()).isEqualTo(expectedGameEnd);
+        assertThat(result.isGameEnd(3)).isEqualTo(expectedGameEnd);
     }
 
     static Stream<Arguments> providePlayArguments() {

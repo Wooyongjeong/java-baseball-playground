@@ -1,7 +1,6 @@
 package baseball;
 
 public class Result {
-    public static final int GAME_END = 3;
     private int ball = 0;
     private int strike = 0;
 
@@ -13,8 +12,8 @@ public class Result {
         return strike;
     }
 
-    public boolean isGameEnd() {
-        return strike == GAME_END;
+    public boolean isGameEnd(int gameEnd) {
+        return strike == gameEnd;
     }
 
     public void report(BallStatus status) {
